@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
+import Timer from './timer';
 
 export default class CreateExercise extends Component {
   constructor(props) {
@@ -51,6 +52,13 @@ export default class CreateExercise extends Component {
   onChangeDuration(e) {
     this.setState({
       duration: e.target.value
+    });
+  }
+
+
+  changeDuration = (newDuration) => {
+    this.setState({
+      duration: newDuration
     });
   }
 
@@ -114,9 +122,10 @@ export default class CreateExercise extends Component {
             <input
               type="text"
               className="form-control"
-              value={this.state.duration == 0 ? '' : this.state.duration}
+              value={this.state.duration === 0 ? '' : this.state.duration}
               onChange={this.onChangeDuration}
             />
+            <Timer handleClick={this.changeDuration}></Timer>
           </div>
           <div className="form-group">
             <label>Date: </label>

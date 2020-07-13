@@ -5,7 +5,12 @@ This project was initially created by following a tutorial. The tutorial can be 
 
 The following functionality of the program was added after the tutorial and is my own work:
 
--
+- Timer
+    - Added a timer to the "Create Exercise" screen that allows users to time their own workouts
+    - Users can then press the "Use this time" button to save their time, rather than having to type it in
+- Quick Add Section
+    - Added a section underneath the exercise list that allows users to quickly add a common workout
+    - For now includes an hour long run, and an hour long weight training session
 
 ## Available Scripts
 
